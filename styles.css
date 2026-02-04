@@ -1,66 +1,107 @@
-/* styles.css */
+/* styles.css - Minimalist Direction */
+
 @layer utilities {
     .bg-brand-overlay {
-        background-color: rgba(255, 255, 255, 0.05);
+        background-color: rgba(255, 255, 255, 0.03);
         backdrop-filter: blur(8px);
     }
-    .bg-brand-gold-gradient {
-        background: linear-gradient(135deg, #D97706 0%, #FBBF24 100%);
-    }
 }
 
-/* Custom Scrollbar */
+/* Base resets */
+html {
+    scroll-behavior: smooth;
+    font-family: 'Lexend', sans-serif;
+}
+
+body {
+    background-color: #050505;
+    color: #E2E8F0;
+}
+
+/* Custom Scrollbar - Minimal */
 ::-webkit-scrollbar {
-    width: 8px;
+    width: 6px;
 }
+
 ::-webkit-scrollbar-track {
-    background: #0B0F19;
+    background: #050505;
 }
+
 ::-webkit-scrollbar-thumb {
-    background: #334155;
-    border-radius: 4px;
+    background: #1F1F1F;
+    border-radius: 3px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
-    background: #475569;
+    background: #404040;
 }
 
-/* Card Hover 3D Effect */
-.card-hover {
-    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-.card-hover:hover {
-    transform: translateY(-4px) scale(1.01);
-    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.5);
-}
-
-/* Text Selection */
+/* Text Selection - High Contrast */
 ::selection {
-    background: #D97706; /* brand-gold */
-    color: #ffffff;
+    background: #FFFFFF;
+    color: #000000;
 }
 
 /* Input Auto-fill fix for dark mode */
 input:-webkit-autofill,
-input:-webkit-autofill:hover, 
-input:-webkit-autofill:focus, 
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
 textarea:-webkit-autofill,
 textarea:-webkit-autofill:hover,
 textarea:-webkit-autofill:focus,
-select:-webkit-autofill,
-select:-webkit-autofill:hover,
-select:-webkit-autofill:focus {
+select:-webkit-autofill {
     -webkit-text-fill-color: white;
-    -webkit-box-shadow: 0 0 0px 1000px #1e293b inset;
+    -webkit-box-shadow: 0 0 0px 1000px #0A0A0A inset;
     transition: background-color 5000s ease-in-out 0s;
 }
 
-/* Smooth Scrolling for anchor links */
-html {
-    scroll-behavior: smooth;
+/* Logo Slider */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
 }
 
-/* Particle Canvas Container */
-#particles {
-    z-index: 0;
-    pointer-events: none;
+.logo-slider {
+    mask-image: linear-gradient(to right, transparent, black 20%, black 80%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 20%, black 80%, transparent);
+}
+
+.logo-slide-track {
+    animation: scroll 40s linear infinite;
+    width: max-content;
+}
+
+.client-logo {
+    /* Minimalist Silhouette: Grey by default */
+    filter: grayscale(100%) brightness(0.6) contrast(1.2);
+    opacity: 0.5;
+    transition: all 0.4s ease;
+}
+
+.client-logo:hover {
+    /* White on hover */
+    filter: grayscale(100%) brightness(2) contrast(1);
+    opacity: 1;
+}
+
+/* Modal Animations */
+.animate-slide-up {
+    animation: slideUp 0.5s ease-out forwards;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
