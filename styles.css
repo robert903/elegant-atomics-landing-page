@@ -1,0 +1,66 @@
+/* styles.css */
+@layer utilities {
+    .bg-brand-overlay {
+        background-color: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(8px);
+    }
+    .bg-brand-gold-gradient {
+        background: linear-gradient(135deg, #D97706 0%, #FBBF24 100%);
+    }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #0B0F19;
+}
+::-webkit-scrollbar-thumb {
+    background: #334155;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #475569;
+}
+
+/* Card Hover 3D Effect */
+.card-hover {
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.card-hover:hover {
+    transform: translateY(-4px) scale(1.01);
+    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.5);
+}
+
+/* Text Selection */
+::selection {
+    background: #D97706; /* brand-gold */
+    color: #ffffff;
+}
+
+/* Input Auto-fill fix for dark mode */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+    -webkit-text-fill-color: white;
+    -webkit-box-shadow: 0 0 0px 1000px #1e293b inset;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+/* Smooth Scrolling for anchor links */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Particle Canvas Container */
+#particles {
+    z-index: 0;
+    pointer-events: none;
+}

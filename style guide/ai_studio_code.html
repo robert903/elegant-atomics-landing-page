@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AdsByJoris | Noble Forest Style Guide</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;700;800&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1"
+        rel="stylesheet" />
+
+    <!-- Tailwind Script -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        // The New Main Color: Rich Emerald (Money/Growth Green)
+                        primary: "#059669",
+                        "primary-hover": "#10B981",
+
+                        // The Backgrounds: Deep Organic Black
+                        "background-dark": "#010F0A",
+                        "card-dark": "#041C15",
+                        "border-dark": "#0F382C",
+                    },
+                    fontFamily: {
+                        display: ["Outfit", "sans-serif"],
+                        sans: ["Inter", "sans-serif"],
+                    },
+                },
+            },
+        };
+    </script>
+</head>
+
+<body class="bg-background-dark text-slate-200 font-sans p-10 selection:bg-primary/30">
+
+    <div class="max-w-6xl mx-auto">
+
+        <!-- Header -->
+        <header class="mb-16 border-b border-border-dark pb-8">
+            <div class="flex items-center gap-3 mb-4">
+                <!-- Logo Block -->
+                <div
+                    class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center shadow-[0_4px_15px_rgba(5,150,105,0.3)]">
+                    <span class="material-symbols-outlined text-white text-2xl font-bold">change_history</span>
+                </div>
+                <h1 class="font-display text-4xl font-bold text-white">Noble Forest <span
+                        class="text-primary">v2.0</span></h1>
+            </div>
+            <p class="text-slate-400">A mature, high-trust palette using deep emeralds instead of neon mints.</p>
+        </header>
+
+        <!-- 1. Color Palette -->
+        <section class="mb-20">
+            <h2 class="font-display text-2xl font-bold text-white mb-8 flex items-center gap-2">
+                <span class="w-2 h-8 bg-primary rounded-full"></span> 01. Color Palette
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Primary -->
+                <div class="space-y-3">
+                    <div
+                        class="h-32 rounded-2xl bg-primary shadow-lg flex items-end p-4 group relative overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                        <span class="text-white font-bold relative z-10">Rich Emerald</span>
+                    </div>
+                    <div class="flex justify-between text-sm text-slate-400 font-mono">
+                        <span>HEX</span>
+                        <span>#059669</span>
+                    </div>
+                    <div class="text-xs text-slate-500">CTAs, Key Data points</div>
+                </div>
+
+                <!-- Background Dark -->
+                <div class="space-y-3">
+                    <div class="h-32 rounded-2xl bg-background-dark border border-border-dark flex items-end p-4">
+                        <span class="text-white font-bold">Obsidian Green</span>
+                    </div>
+                    <div class="flex justify-between text-sm text-slate-400 font-mono">
+                        <span>HEX</span>
+                        <span>#010F0A</span>
+                    </div>
+                    <div class="text-xs text-slate-500">Page Background</div>
+                </div>
+
+                <!-- Card Dark -->
+                <div class="space-y-3">
+                    <div class="h-32 rounded-2xl bg-card-dark border border-border-dark flex items-end p-4">
+                        <span class="text-white font-bold">Deep Jungle</span>
+                    </div>
+                    <div class="flex justify-between text-sm text-slate-400 font-mono">
+                        <span>HEX</span>
+                        <span>#041C15</span>
+                    </div>
+                    <div class="text-xs text-slate-500">Card Surfaces</div>
+                </div>
+
+                <!-- Border -->
+                <div class="space-y-3">
+                    <div class="h-32 rounded-2xl bg-border-dark flex items-end p-4">
+                        <span class="text-white font-bold">Pine Border</span>
+                    </div>
+                    <div class="flex justify-between text-sm text-slate-400 font-mono">
+                        <span>HEX</span>
+                        <span>#0F382C</span>
+                    </div>
+                    <div class="text-xs text-slate-500">Subtle separation</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. UI Components -->
+        <section class="mb-20">
+            <h2 class="font-display text-2xl font-bold text-white mb-8 flex items-center gap-2">
+                <span class="w-2 h-8 bg-primary rounded-full"></span> 02. Components
+            </h2>
+
+            <div class="grid lg:grid-cols-3 gap-8">
+
+                <!-- Buttons & Inputs -->
+                <div class="space-y-8 p-8 rounded-[24px] border border-border-dark bg-card-dark/30">
+                    <h3 class="font-display text-xl font-bold text-white mb-6">Interactive</h3>
+
+                    <!-- Primary Button -->
+                    <div>
+                        <button
+                            class="w-full px-6 py-4 bg-primary text-white font-bold rounded-xl shadow-[0_4px_20px_-5px_rgba(5,150,105,0.4)] hover:bg-primary-hover transition-all active:scale-95">
+                            Get Free Audit
+                        </button>
+                        <div class="mt-3 text-xs text-center text-slate-500">White text for better contrast</div>
+                    </div>
+
+                    <!-- Secondary Button -->
+                    <div>
+                        <button
+                            class="w-full px-6 py-4 border border-border-dark text-white font-bold rounded-xl hover:bg-border-dark transition-all">
+                            View Case Studies
+                        </button>
+                    </div>
+
+                    <!-- Form Input -->
+                    <div>
+                        <div class="relative">
+                            <input type="text" placeholder="Enter email..."
+                                class="w-full bg-background-dark border border-border-dark rounded-xl px-4 py-3 text-slate-200 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all">
+                            <span class="material-symbols-outlined absolute right-3 top-3.5 text-slate-500">mail</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feature Card -->
+                <div
+                    class="lg:col-span-2 p-10 rounded-[32px] bg-card-dark border border-border-dark hover:border-primary/50 transition-all duration-500 group relative overflow-hidden">
+                    <!-- Subtle Gradient Background inside card -->
+                    <div
+                        class="absolute top-0 right-0 w-64 h-64 bg-primary/5 blur-[80px] rounded-full group-hover:bg-primary/10 transition-all">
+                    </div>
+
+                    <div class="relative z-10">
+                        <div class="flex items-start justify-between mb-8">
+                            <div
+                                class="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center border border-primary/20 group-hover:bg-primary group-hover:border-primary transition-all duration-300">
+                                <span
+                                    class="material-symbols-outlined text-primary text-3xl group-hover:text-white transition-colors">monetization_on</span>
+                            </div>
+                        </div>
+
+                        <h3 class="font-display text-3xl font-bold text-white mb-4">Revenue Growth</h3>
+                        <p class="text-slate-400 mb-8 max-w-md leading-relaxed">
+                            We focus on ROI. By using deep funnel strategies, we turn ad spend into predictable profit.
+                        </p>
+
+                        <!-- Chart Visual -->
+                        <div class="h-32 flex items-end gap-3 mt-auto">
+                            <!-- Bars use the new Emerald Gradient -->
+                            <div
+                                class="flex-1 bg-gradient-to-t from-primary/10 to-primary/20 h-1/3 rounded-t-sm border-t border-primary/30">
+                            </div>
+                            <div
+                                class="flex-1 bg-gradient-to-t from-primary/10 to-primary/30 h-1/2 rounded-t-sm border-t border-primary/40">
+                            </div>
+                            <div
+                                class="flex-1 bg-gradient-to-t from-primary/10 to-primary/40 h-3/4 rounded-t-sm border-t border-primary/50">
+                            </div>
+                            <div
+                                class="flex-1 bg-gradient-to-t from-primary/20 to-primary h-full rounded-t-sm shadow-[0_0_20px_rgba(5,150,105,0.2)]">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Typography & Gradients -->
+        <section>
+            <h2 class="font-display text-2xl font-bold text-white mb-8 flex items-center gap-2">
+                <span class="w-2 h-8 bg-primary rounded-full"></span> 03. Typography & Atmosphere
+            </h2>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Text Gradient -->
+                <div
+                    class="h-64 rounded-3xl border border-border-dark bg-background-dark flex flex-col items-center justify-center p-8 text-center relative overflow-hidden">
+                    <div
+                        class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-5">
+                    </div>
+                    <h2 class="font-display text-5xl font-bold text-white mb-4 relative z-10">
+                        Organic <br>
+                        <span
+                            class="text-transparent bg-clip-text bg-gradient-to-r from-primary via-emerald-400 to-teal-200">Growth</span>
+                    </h2>
+                    <p class="text-slate-500 text-sm mt-2 relative z-10">Gradient: from-primary via-emerald-400</p>
+                </div>
+
+                <!-- Text Sample -->
+                <div class="h-64 rounded-3xl border border-border-dark bg-card-dark p-8 flex flex-col justify-center">
+                    <h3 class="text-primary font-bold tracking-widest text-xs uppercase mb-3">Case Study</h3>
+                    <h4 class="text-white text-2xl font-bold mb-3 font-display">Scaling Fintech to $10M ARR</h4>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Using our "Noble Forest" framework, we increased trust signals on the landing page, resulting in
+                        a <span class="text-primary font-bold">45% lift</span> in conversion.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+</body>
+
+</html>
